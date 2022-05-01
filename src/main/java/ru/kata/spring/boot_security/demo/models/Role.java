@@ -18,12 +18,15 @@ public class Role implements GrantedAuthority {
     @Column(name = "role_name")
     private String roleName;
 
+//    @ManyToMany(mappedBy = "roles")
+//    private Set<User> users;
+
     public Role() {
     }
 
     @Override
     public String toString() {
-        return roleName.replace("ROLE_","");
+        return roleName.replace("ROLE_", "");
     }
 
     @Override
@@ -43,6 +46,13 @@ public class Role implements GrantedAuthority {
         this.id = id;
     }
 
+//    public Set<User> getUsers() {
+//        return users;
+//    }
+//
+//    public void setUsers(Set<User> users) {
+//        this.users = users;
+//    }
 
 
     @Override
